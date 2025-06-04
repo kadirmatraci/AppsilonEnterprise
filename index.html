@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appsilon Enterprise - Leading Innovation in Lab-Grown Diamonds</title>
+    <meta name="description" content="Appsilon Enterprise pioneers advanced lab-grown diamond technology, providing innovative solutions for electronics, optics, quantum computing, and various industrial applications. Discover our high-quality, tailor-made diamond materials.">
+    
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Appsilon Enterprise",
+      "url": "Appsilon Logo.avif", // TODO: Replace with your actual website URL
+      "logo": "https://static.wixstatic.com/media/f00eca_34f21c6009f84e8192027574dd545c37~mv2.png/v1/crop/x_0,y_28,w_781,h_145/fill/w_361,h_65,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/entlogo-01.png", // Using the provided logo URL
+      "description": "Appsilon Enterprise specializes in advanced lab-grown diamond technology for cutting-edge applications across various industries, including electronics, optics, and quantum computing.",
+      "contactPoint": [ // Array of contact points
+        {
+          "@type": "ContactPoint",
+          "telephone": "+90-216-999-6323",
+          "contactType": "Customer Service / General Inquiries", // General contact for Istanbul
+          "email": "info@appsilonenterprise.com",
+          "areaServed": "TR",
+          "availableLanguage": ["English", "Turkish"]
+        }
+        // You can add a separate contactPoint for Delft if phone/email differs
+      ],
+      "location": [
+        {
+          "@type": "Place",
+          "name": "İstanbul Headquarters",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Sanayi Mah. Teknopark Blv. Teknopark 4A, Apt1/4A 101",
+            "addressLocality": "Pendik",
+            "addressRegion": "İstanbul",
+            "postalCode": "34906",
+            "addressCountry": "TR"
+          }
+        },
+        {
+          "@type": "Place",
+          "name": "Delft Office",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Molengraaffsingel", // User might need to add street number e.g. Molengraaffsingel 12
+            "addressLocality": "Delft",
+            "postalCode": "2629 JD",
+            "addressCountry": "NL"
+          }
+        }
+      ],
+      "sameAs": [ 
+        "https://www.linkedin.com/company/appsilon-advanced-materials/",
+        "https://www.crunchbase.com/organization/appsilon-diamond-works"
+        // TODO: Add other relevant social media profile URLs
+      ]
+    }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #374151; /* text-gray-700 */
+            background-color: #f9fafb; /* bg-gray-50 */
+            scroll-behavior: smooth; /* Native smooth scroll for non-JS scenarios */
+        }
+
+        /* Minimal custom CSS, primarily for complex pseudo-elements or very specific layouts */
+        .nav-link-underline::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px; /* Adjust for spacing */
+            left: 0;
+            background-color: white;
+            transition: width 0.3s ease-in-out;
+        }
+
+        .nav-link-underline:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-nav-link-underline::after {
+            background-color: #60a5fa; /* A lighter color for mobile menu, e.g., text-blue-400 */
+        }
+
+
+        .timeline {
+            position: relative;
+        }
+
+        /* The vertical line in the middle of the timeline */
+        .timeline::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 2px; /* Or w-0.5 with Tailwind bg */
+            background-color: #d1d5db; /* bg-gray-300 */
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+        }
+
+        @media (max-width: 767px) { /* md breakpoint */
+            .timeline::before {
+                left: 20px; /* Adjust for mobile layout if items are aligned left */
+                transform: translateX(0);
+            }
+        }
+        
+        .timeline-item-dot {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #1f2937; /* bg-gray-800 */
+            left: 50%;
+            top: 20px; /* Adjust as needed */
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+
+         @media (max-width: 767px) { /* md breakpoint */
+            .timeline-item-dot {
+                left: 20px; /* Align with the line */
+                top: 0px; /* Adjust to align with content */
+            }
+        }
+
+        /* Custom scrollbar for better aesthetics (optional) */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-700">
+    <header class="fixed top-0 left-0 right-0 bg-slate-900 z-50 shadow-md h-18"> <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-full"> <a href="#home" class="flex items-center">
+                    <img src="https://static.wixstatic.com/media/f00eca_34f21c6009f84e8192027574dd545c37~mv2.png/v1/crop/x_0,y_28,w_781,h_145/fill/w_361,h_65,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/entlogo-01.png" alt="Appsilon Enterprise Logo" class="h-8 w-auto">
+                </a>
+                <nav class="hidden md:flex space-x-4">
+                    <a href="#home" class="nav-link-underline relative text-white py-2 px-3 hover:text-slate-300 transition-colors duration-300">Home</a>
+                    <a href="#company" class="nav-link-underline relative text-white py-2 px-3 hover:text-slate-300 transition-colors duration-300">Company</a>
+                    <a href="#products" class="nav-link-underline relative text-white py-2 px-3 hover:text-slate-300 transition-colors duration-300">Products</a>
+                    <a href="#industries" class="nav-link-underline relative text-white py-2 px-3 hover:text-slate-300 transition-colors duration-300">Industries</a>
+                    <a href="#why-diamonds" class="nav-link-underline relative text-white py-2 px-3 hover:text-slate-300 transition-colors duration-300">Why Diamonds</a>
+                    <a href="#technology" class="nav-link-underline relative text-white py-2 px-3 hover:text-slate-300 transition-colors duration-300">Technology</a>
+                    <a href="#contact" class="nav-link-underline relative text-white py-2 px-3 hover:text-slate-300 transition-colors duration-300">Contact</a>
+                    <a href="#careers" class="nav-link-underline relative text-white py-2 px-3 hover:text-slate-300 transition-colors duration-300">Careers</a>
+                </nav>
+                <button id="mobileMenuButton" class="md:hidden text-white text-2xl p-2 rounded-md hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-slate-800 absolute top-18 left-0 right-0 shadow-lg"> <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="mobile-nav-link-underline relative block text-white hover:bg-slate-700 hover:text-slate-200 px-3 py-2 rounded-md text-base font-medium transition-colors duration-300">Home</a>
+                <a href="#company" class="mobile-nav-link-underline relative block text-white hover:bg-slate-700 hover:text-slate-200 px-3 py-2 rounded-md text-base font-medium transition-colors duration-300">Company</a>
+                <a href="#products" class="mobile-nav-link-underline relative block text-white hover:bg-slate-700 hover:text-slate-200 px-3 py-2 rounded-md text-base font-medium transition-colors duration-300">Products</a>
+                <a href="#industries" class="mobile-nav-link-underline relative block text-white hover:bg-slate-700 hover:text-slate-200 px-3 py-2 rounded-md text-base font-medium transition-colors duration-300">Industries</a>
+                <a href="#why-diamonds" class="mobile-nav-link-underline relative block text-white hover:bg-slate-700 hover:text-slate-200 px-3 py-2 rounded-md text-base font-medium transition-colors duration-300">Why Diamonds</a>
+                <a href="#technology" class="mobile-nav-link-underline relative block text-white hover:bg-slate-700 hover:text-slate-200 px-3 py-2 rounded-md text-base font-medium transition-colors duration-300">Technology</a>
+                <a href="#contact" class="mobile-nav-link-underline relative block text-white hover:bg-slate-700 hover:text-slate-200 px-3 py-2 rounded-md text-base font-medium transition-colors duration-300">Contact</a>
+                <a href="#careers" class="mobile-nav-link-underline relative block text-white hover:bg-slate-700 hover:text-slate-200 px-3 py-2 rounded-md text-base font-medium transition-colors duration-300">Careers</a>
+            </div>
+        </div>
+    </header>
+
+<section id="home" class="relative h-screen min-h-[600px] bg-cover bg-center flex items-center scroll-mt-18" 
+         style="background-image: url('Diamond Landing.jpg');">
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-white max-w-3xl">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                Leading Innovation in Lab-Grown Diamonds
+            </h1>
+            <p class="text-lg sm:text-xl mb-8">
+                Appsilon Enterprise: Pioneering the future with advanced lab-grown diamond technology for cutting-edge applications across industries.
+            </p>
+            <a href="#products" class="inline-block bg-slate-700 text-white py-3 px-8 rounded-lg text-lg font-semibold hover:bg-slate-600 transition-all duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl">
+                Explore Our Diamond Products
+            </a>
+        </div>
+    </div>
+</section>
+
+
+    <section class="py-16 sm:py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-800 mb-4">Welcome to Appsilon Enterprise</h2>
+                <p class="text-lg text-slate-600 max-w-3xl mx-auto">At Appsilon Enterprise, we create the future through advanced lab-grown diamond technology. Our innovations provide exceptional thermal, optical, and electrical properties for the most demanding applications.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+                <div class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-slate-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 text-slate-700">
+                        <i class="fas fa-gem text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Innovative Diamond Technology</h3>
+                    <p class="text-slate-600">Pioneering lab-grown diamond production with state-of-the-art reactors and processing capabilities.</p>
+                </div>
+                
+                <div class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-slate-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 text-slate-700">
+                        <i class="fas fa-microscope text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Advanced Diamond Research</h3>
+                    <p class="text-slate-600">Pushing the boundaries of materials science through continuous research and development in diamond applications.</p>
+                </div>
+                
+                <div class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-slate-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 text-slate-700">
+                        <i class="fas fa-industry text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Industrial Diamond Solutions</h3>
+                    <p class="text-slate-600">Delivering customized lab-grown diamond solutions for the most demanding industrial applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="company" class="py-16 sm:py-5 bg-slate-50 scroll-mt-18">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-800 mb-4">Our Company: Appsilon Enterprise</h2>
+                <p class="text-lg text-slate-600 max-w-3xl mx-auto">Learn about our journey and our vision for the future of lab-grown diamond technology.</p>
+            </div>
+            
+            <div class="mb-16">
+                <h3 class="text-2xl sm:text-3xl font-semibold text-slate-800 mb-12 text-center">Our History in Diamond Innovation</h3>
+                <div class="timeline max-w-3xl mx-auto">
+                    <div class="timeline-item relative mb-4 md:mb-6 pl-10 md:pl-0">
+                        <div class="timeline-item-dot"></div>
+                        <div class="md:flex md:items-start md:space-x-8">
+                            <div class="timeline-content bg-white p-6 rounded-lg shadow-lg md:w-[calc(50%-2rem)] md:ml-auto md:text-left">
+                                <h4 class="text-xl font-semibold text-slate-800 mb-2">2016: Foundation</h4>
+                                <p class="text-slate-600">Appsilon Enterprise founded with a focus on research in advanced materials, including synthetic diamonds.</p>
+                            </div>
+                            <div class="hidden md:block md:w-[calc(50%-2rem)]"></div> </div>
+                    </div>
+                     <div class="timeline-item relative mb-4 md:mb-6 pl-10 md:pl-0">
+                        <div class="timeline-item-dot"></div>
+                        <div class="md:flex md:items-start md:flex-row-reverse md:space-x-8 md:space-x-reverse">
+                             <div class="timeline-content bg-white p-6 rounded-lg shadow-lg md:w-[calc(50%-2rem)] md:mr-auto md:text-left">
+                                <h4 class="text-xl font-semibold text-slate-800 mb-2">2017: Breakthrough</h4>
+                                <p class="text-slate-600">We produced the first single crystal diamond in our own lab.</p>
+                            </div>
+                            <div class="hidden md:block md:w-[calc(50%-2rem)]"></div> </div>
+                    </div>
+                     <div class="timeline-item relative mb-4 md:mb-6 pl-10 md:pl-0">
+                        <div class="timeline-item-dot"></div>
+                        <div class="md:flex md:items-start md:space-x-8">
+                            <div class="timeline-content bg-white p-6 rounded-lg shadow-lg md:w-[calc(50%-2rem)] md:ml-auto md:text-left">
+                                <h4 class="text-xl font-semibold text-slate-800 mb-2">2019: Commercialization</h4>
+                                <p class="text-slate-600">Achieved 1 carat polished +G color diamond.</p>
+                            </div>
+                            <div class="hidden md:block md:w-[calc(50%-2rem)]"></div>
+                        </div>
+                    </div>
+                     <div class="timeline-item relative mb-4 md:mb-6 pl-10 md:pl-0">
+                        <div class="timeline-item-dot"></div>
+                        <div class="md:flex md:items-start md:flex-row-reverse md:space-x-8 md:space-x-reverse">
+                             <div class="timeline-content bg-white p-6 rounded-lg shadow-lg md:w-[calc(50%-2rem)] md:mr-auto md:text-left">
+                                <h4 class="text-xl font-semibold text-slate-800 mb-2">2021: Expansion</h4>
+                                <p class="text-slate-600">Produced our first reactor for diamond synthesis.</p>
+                            </div>
+                            <div class="hidden md:block md:w-[calc(50%-2rem)]"></div>
+                        </div>
+                    </div>
+                     <div class="timeline-item relative mb-4 md:mb-6 pl-10 md:pl-0">
+                        <div class="timeline-item-dot"></div>
+                        <div class="md:flex md:items-start md:space-x-8">
+                            <div class="timeline-content bg-white p-6 rounded-lg shadow-lg md:w-[calc(50%-2rem)] md:ml-auto md:text-left">
+                                <h4 class="text-xl font-semibold text-slate-800 mb-2">2024: Specialization</h4>
+                                <p class="text-slate-600">Started the mass production of electronic grade diamonds.</p>
+                            </div>
+                            <div class="hidden md:block md:w-[calc(50%-2rem)]"></div>
+                        </div>
+                    </div>
+                    <div class="timeline-item relative pl-10 md:pl-0"> <div class="timeline-item-dot"></div>
+                        <div class="md:flex md:items-start md:flex-row-reverse md:space-x-8 md:space-x-reverse">
+                             <div class="timeline-content bg-white p-6 rounded-lg shadow-lg md:w-[calc(50%-2rem)] md:mr-auto md:text-left">
+                                <h4 class="text-xl font-semibold text-slate-800 mb-2">Present: Leadership</h4>
+                                <p class="text-slate-600">Appsilon Enterprise stands as an industry leader in high-performance lab-grown diamond materials for critical applications.</p>
+                            </div>
+                            <div class="hidden md:block md:w-[calc(50%-2rem)]"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+           <div>
+    <h3 class="text-2xl sm:text-3xl font-semibold text-slate-800 mb-12 text-center">Our Investors & Partners</h3>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8">
+        <div class="bg-white p-4 sm:p-6 flex flex-col items-center justify-center rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="esaspe.png" alt="Esas Private Equity" class="h-12 mb-3 object-contain" />
+            <p class="font-semibold text-slate-700 text-center text-sm sm:text-base"></p>
+        </div>
+
+        <div class="bg-white p-4 sm:p-6 flex flex-col items-center justify-center rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="dcp.png" alt="Diffusion Capital Partners" class="h-12 mb-3 object-contain" />
+            <p class="font-semibold text-slate-700 text-center text-sm sm:text-base"></p>
+        </div>
+
+        <div class="bg-white p-4 sm:p-6 flex flex-col items-center justify-center rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="kalkinma.png" alt="Kalkınma Yatırım Bankası" class="h-12 mb-3 object-contain" />
+            <p class="font-semibold text-slate-700 text-center text-sm sm:text-base"></p>
+        </div>
+
+        <div class="bg-white p-4 sm:p-6 flex flex-col items-center justify-center rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="quantum delta.png" alt="Quantum Delta" class="h-12 mb-3 object-contain" />
+            <p class="font-semibold text-slate-700 text-center text-sm sm:text-base"></p>
+        </div>
+
+        <div class="bg-white p-4 sm:p-6 flex flex-col items-center justify-center rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="tubitak.png" alt="TÜBİTAK" class="h-12 mb-3 object-contain" />
+            <p class="font-semibold text-slate-700 text-center text-sm sm:text-base"></p>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </section>
+
+    <section id="products" class="py-16 sm:py-5 bg-white scroll-mt-18">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-3 sm:mb-6">
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-800 mb-4">Products & Services</h2>
+                <p class="text-lg text-slate-600 max-w-3xl mx-auto">Discover our range of advanced lab-grown diamond products tailored for specialized applications.</p>
+            </div>
+            
+            <div class="mb-4 sm:mb-6 flex flex-wrap justify-center gap-2 sm:gap-4">
+                <button class="tab py-2 px-4 sm:py-3 sm:px-6 rounded-md font-medium transition-all duration-300 ease-in-out border-2 border-transparent hover:border-slate-700 hover:text-slate-800" data-tab="optical">Optical Grade Diamonds</button>
+                <button class="tab py-2 px-4 sm:py-3 sm:px-6 rounded-md font-medium transition-all duration-300 ease-in-out border-2 border-transparent hover:border-slate-700 hover:text-slate-800" data-tab="quantum">Quantum Grade Diamonds</button>
+                <button class="tab py-2 px-4 sm:py-3 sm:px-6 rounded-md font-medium transition-all duration-300 ease-in-out border-2 border-transparent hover:border-slate-700 hover:text-slate-800" data-tab="industrial">Industrial Diamonds</button>
+                <button class="tab py-2 px-4 sm:py-3 sm:px-6 rounded-md font-medium transition-all duration-300 ease-in-out border-2 border-transparent hover:border-slate-700 hover:text-slate-800" data-tab="electronic">Electronic Grade Diamonds</button>
+                <button class="tab py-2 px-4 sm:py-3 sm:px-6 rounded-md font-medium transition-all duration-300 ease-in-out border-2 border-transparent hover:border-slate-700 hover:text-slate-800" data-tab="heat">Diamond Heat Spreaders</button>
+                <button class="tab py-2 px-4 sm:py-3 sm:px-6 rounded-md font-medium transition-all duration-300 ease-in-out border-2 border-transparent hover:border-slate-700 hover:text-slate-800" data-tab="medical">Medical Grade Diamonds</button>
+                <button class="tab py-2 px-4 sm:py-3 sm:px-6 rounded-md font-medium transition-all duration-300 ease-in-out border-2 border-transparent hover:border-slate-700 hover:text-slate-800" data-tab="custom">Tailor-made Diamond Solutions</button>
+            </div>
+            
+            <div class="tab-content active" id="optical">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center bg-slate-50 p-6 sm:p-8 rounded-lg shadow-md">
+                    <div>
+            <img src="Optical Grade.jpg" 
+                alt="Optical grade diamonds for X-rays and high-power lasers" 
+                class="rounded-lg shadow-lg w-full h-auto object-cover" 
+                onerror="this.onerror=null;this.src='https://placehold.co/600x400/CCCCCC/FFFFFF?text=Optical+Diamond+Image';">                  
+           </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-slate-800 mb-4">Optical Grade Lab-Grown Diamonds</h3>
+                        <p class="text-slate-600 mb-6">Our optical-grade lab-grown diamonds feature exceptional clarity and precision for advanced photonic applications. With superior light transmission properties across a wide spectrum, these diamonds enable cutting-edge developments in high-power laser systems, and precision optics.</p>
+                        <ul class="list-disc pl-5 mb-6 text-slate-600 space-y-1">
+                            <li>Exceptional optical clarity with minimal defects</li>
+                            <li>Customizable dimensions for specific applications</li>
+                            <li>Superior performance in high-energy laser environments</li>
+                            <li>Quantum-grade purity for advanced research applications</li>
+                        </ul>
+                        <a href="#contact" class="inline-block bg-slate-700 text-white py-2 px-6 rounded-lg font-medium hover:bg-slate-600 transition-colors duration-300">Request Optical Diamond Specs</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content hidden" id="quantum">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center bg-slate-50 p-6 sm:p-8 rounded-lg shadow-md">
+                    <div class="md:order-2">
+                        <img src="Quantum Grade.jpg" 
+                             alt="Quantum grade diamonds with NV centers for quantum computing" 
+                             class="rounded-lg shadow-lg w-full h-auto object-cover" 
+                             onerror="this.onerror=null;this.src='https://placehold.co/600x400/CCCCCC/FFFFFF?text=Quantum+Diamond+Image';">
+                    </div>
+                    <div class="md:order-1">
+                        <h3 class="text-2xl font-semibold text-slate-800 mb-4">Quantum Grade Lab-Grown Diamonds</h3>
+                        <p class="text-slate-600 mb-6">Our quantum-grade lab-grown diamonds are engineered with exceptionally low nitrogen concentrations and specific NV (Nitrogen-Vacancy) center densities, crucial for pioneering quantum computing, sensing, and communication technologies. These diamonds offer unparalleled coherence times and spin properties.</p>
+                        <ul class="list-disc pl-5 mb-6 text-slate-600 space-y-1">
+                            <li>Ultra-low nitrogen concentration ([N] < 1 ppb)</li>
+                            <li>Controlled NV-center creation and isotopic purity</li>
+                            <li>High crystal quality and minimal strain for extended coherence</li>
+                            <li>Optimized for quantum sensing, QIP, and quantum networks</li>
+                            <li>Customizable material properties for specific quantum applications</li>
+                        </ul>
+                        <a href="#contact" class="inline-block bg-slate-700 text-white py-2 px-6 rounded-lg font-medium hover:bg-slate-600 transition-colors duration-300">Request Quantum Diamond Specs</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content hidden" id="industrial">
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center bg-slate-50 p-6 sm:p-8 rounded-lg shadow-md">
+                    <div>
+                        <img src="Industrial Tool.jpg" alt="Industrial grade diamonds for manufacturing" 
+                        class="rounded-lg shadow-lg w-full h-auto object-cover" 
+                        onerror="this.onerror=null;this.src='https://placehold.co/600x400/CCCCCC/FFFFFF?text=Industrial+Diamond+Image';">
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-slate-800 mb-4">Industrial Lab-Grown Diamonds</h3>
+                        <p class="text-slate-600 mb-6">Our industrial-grade lab-grown diamonds deliver unmatched hardness and durability for the most demanding manufacturing applications. These diamonds are engineered for precision cutting, grinding, and drilling across multiple industries.</p>
+                        <ul class="list-disc pl-5 mb-6 text-slate-600 space-y-1">
+                            <li>Superior hardness for extended tool life</li>
+                            <li>Consistent performance under extreme conditions</li>
+                            <li>Precision-engineered for specific industrial processes</li>
+                            <li>Available in various specifications to meet exact requirements</li>
+                        </ul>
+                        <a href="#contact" class="inline-block bg-slate-700 text-white py-2 px-6 rounded-lg font-medium hover:bg-slate-600 transition-colors duration-300">Request Industrial Diamond Specs</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content hidden" id="electronic">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center bg-slate-50 p-6 sm:p-8 rounded-lg shadow-md">
+                    <div class="md:order-2">
+                        <img src="Semicon.jpg" alt="Electronic grade diamonds for semiconductor applications" 
+                        class="rounded-lg shadow-lg w-full h-auto object-cover" 
+                        onerror="this.onerror=null;this.src='https://placehold.co/600x400/CCCCCC/FFFFFF?text=Electronic+Diamond+Image';">
+                    </div>
+                    <div class="md:order-1">
+                        <h3 class="text-2xl font-semibold text-slate-800 mb-4">Electronic Grade Lab-Grown Diamonds</h3>
+                        <p class="text-slate-600 mb-6">Our electronic-grade lab-grown diamonds provide the perfect combination of thermal conductivity and electrical insulation for next-generation electronic applications. These diamonds enable significant advancements in semiconductor technology and high-power electronics.</p>
+                        <ul class="list-disc pl-5 mb-6 text-slate-600 space-y-1">
+                            <li>Ultra-high thermal conductivity (>2000 W/mK)</li>
+                            <li>Superior electrical insulation properties</li>
+                            <li>Customizable doping profiles for specialized applications</li>
+                            <li>Compatible with modern semiconductor fabrication processes</li>
+                        </ul>
+                        <a href="#contact" class="inline-block bg-slate-700 text-white py-2 px-6 rounded-lg font-medium hover:bg-slate-600 transition-colors duration-300">Request Electronic Diamond Specs</a>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content hidden" id="heat">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center bg-slate-50 p-6 sm:p-8 rounded-lg shadow-md">
+                     <div>
+                        <img src="Heat.jpg" alt="Diamond heat spreaders for thermal management" 
+                        class="rounded-lg shadow-lg w-full h-auto object-cover" 
+                        onerror="this.onerror=null;this.src='https://placehold.co/600x400/CCCCCC/FFFFFF?text=Heat+Spreader+Image';">
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-slate-800 mb-4">Lab-Grown Diamond Heat Spreaders</h3>
+                        <p class="text-slate-600 mb-6">Our diamond heat spreaders offer unparalleled thermal management for critical electronic components. With thermal conductivity five times greater than copper, our heat spreaders enable more efficient and reliable operation of high-power electronic devices.</p>
+                        <ul class="list-disc pl-5 mb-6 text-slate-600 space-y-1">
+                            <li>Thermal conductivity up to 2100 W/mK</li>
+                            <li>Customizable dimensions and interface configurations</li>
+                            <li>Compatible with various electronic package designs</li>
+                            <li>Extends component lifetime through superior heat dissipation</li>
+                        </ul>
+                        <a href="#contact" class="inline-block bg-slate-700 text-white py-2 px-6 rounded-lg font-medium hover:bg-slate-600 transition-colors duration-300">Request Heat Spreader Specs</a>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content hidden" id="medical">
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center bg-slate-50 p-6 sm:p-8 rounded-lg shadow-md">
+                    <div class="md:order-2">
+                        <img src="Medical.jpg" alt="Medical grade diamonds for healthcare applications" 
+                        class="rounded-lg shadow-lg w-full h-auto object-cover" 
+                        onerror="this.onerror=null;this.src='https://placehold.co/600x400/CCCCCC/FFFFFF?text=Medical+Diamond+Image';">
+                    </div>
+                    <div class="md:order-1">
+                        <h3 class="text-2xl font-semibold text-slate-800 mb-4">Medical Grade Lab-Grown Diamonds</h3>
+                        <p class="text-slate-600 mb-6">Our medical-grade lab-grown diamonds feature exceptional biocompatibility and precision for advanced healthcare applications. These diamonds enable breakthroughs in medical imaging, biosensing, and therapeutic technologies.</p>
+                        <ul class="list-disc pl-5 mb-6 text-slate-600 space-y-1">
+                            <li>Ultra-high purity with biocompatible properties</li>
+                            <li>Specialized surface functionalization options</li>
+                            <li>Optimized optical and electrical properties for sensing</li>
+                            <li>Compliant with medical device regulatory standards</li>
+                        </ul>
+                        <a href="#contact" class="inline-block bg-slate-700 text-white py-2 px-6 rounded-lg font-medium hover:bg-slate-600 transition-colors duration-300">Request Medical Diamond Specs</a>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content hidden" id="custom">
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center bg-slate-50 p-6 sm:p-8 rounded-lg shadow-md">
+                     <div>
+                        <img src="Custom.jpg" alt="Tailor-made diamond production process" 
+                        class="rounded-lg shadow-lg w-full h-auto object-cover" 
+                        onerror="this.onerror=null;this.src='https://placehold.co/600x400/CCCCCC/FFFFFF?text=Custom+Diamond+Image';">
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-slate-800 mb-4">Tailor-made Lab-Grown Diamond Solutions</h3>
+                        <p class="text-slate-600 mb-6">Our custom diamond production service allows researchers and developers to specify exact lab-grown diamond properties for their unique applications. From specialized doping profiles to precise dimensional requirements, we create diamonds for your most challenging technical needs.</p>
+                        <ul class="list-disc pl-5 mb-6 text-slate-600 space-y-1">
+                            <li>Collaborative development process with technical experts</li>
+                            <li>Precise control of physical and chemical properties</li>
+                            <li>Specialized characterization and quality assurance</li>
+                            <li>Ongoing technical support throughout implementation</li>
+                        </ul>
+                        <a href="#contact" class="inline-block bg-slate-700 text-white py-2 px-6 rounded-lg font-medium hover:bg-slate-600 transition-colors duration-300">Discuss Custom Diamond Requirements</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="industries" class="py-16 sm:py-5 bg-slate-50 scroll-mt-18">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 sm:mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-slate-800 mb-4">Industries We Serve</h2>
+            <p class="text-lg text-slate-600 max-w-3xl mx-auto">Our advanced lab-grown diamond materials power innovation across a wide range of industries and applications.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <div class="group relative rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 h-80">
+                <img src="Electronics.jpg" alt="Lab-grown diamonds in Electronics & Semiconductors industry" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.onerror=null;this.src='https://placehold.co/600x400/CCCCCC/FFFFFF?text=Electronics+Industry';">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-1/3 group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
+                    <h3 class="text-2xl font-semibold mb-2">Electronics & Semiconductors</h3>
+                    <p class="text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Advanced thermal management solutions and substrate materials using lab-grown diamonds for next-generation electronic devices.</p>
+                </div>
+            </div>
+
+            <div class="group relative rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 h-80">
+                <img src="Aerospace.jpg" alt="Lab-grown diamonds in Aerospace & Defense industry" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.onerror=null;this.src='https://placehold.co/600x400/CCCCCC/FFFFFF?text=Aerospace+Industry';">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-1/3 group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
+                    <h3 class="text-2xl font-semibold mb-2">Aerospace & Defense</h3>
+                    <p class="text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">High-performance lab-grown diamond materials for critical components in aerospace systems and sensing technologies.</p>
+                </div>
+            </div>
+
+            <div class="group relative rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 h-80">
+                <img src="Optics.jpg" alt="Lab-grown diamonds in Optics & Photonics industry" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.onerror=null;this.src='https://placehold.co/600x400/CCCCCC/FFFFFF?text=Optics+Industry';">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-1/3 group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
+                    <h3 class="text-2xl font-semibold mb-2">Optics & Photonics</h3>
+                    <p class="text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Precision optical components from lab-grown diamonds for laser systems, quantum technologies, and advanced sensing.</p>
+                </div>
+            </div>
+
+            <div class="group relative rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 h-80">
+                <img src="Healthcare.jpg" alt="Lab-grown diamonds in Healthcare & Medical Technology" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.onerror=null;this.src='https://placehold.co/600x400/CCCCCC/FFFFFF?text=Healthcare+Industry';">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-1/3 group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
+                    <h3 class="text-2xl font-semibold mb-2">Healthcare & Medical</h3>
+                    <p class="text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Biocompatible lab-grown diamond materials for advanced medical devices, imaging, and therapeutic applications.</p>
+                </div>
+            </div>
+
+            <div class="group relative rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 h-80">
+                <img src="Industrial.jpg" alt="Industrial manufacturing facility with Kunkel Wagner moulding machines, relevant to lab-grown diamond applications" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.onerror=null;this.src='https://placehold.co/600x400/CCCCCC/FFFFFF?text=Manufacturing+Industry+Image+Unavailable';">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-1/3 group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
+                    <h3 class="text-2xl font-semibold mb-2">Industrial Manufacturing</h3>
+                    <p class="text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">High-performance lab-grown diamond tools and components for precision manufacturing and extreme environments.</p>
+                </div>
+            </div>
+
+            <div class="group relative rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 h-80">
+                <img src="Research and Development.jpg" alt="Lab-grown diamonds in Research & Development" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.onerror=null;this.src='https://placehold.co/600x400/CCCCCC/FFFFFF?text=R&D+Industry';">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-1/3 group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
+                    <h3 class="text-2xl font-semibold mb-2">Research & Development</h3>
+                    <p class="text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Specialized lab-grown diamond materials for scientific research, materials development, and experimental technologies.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <section id="why-diamonds" class="py-16 sm:py-5 bg-white scroll-mt-18">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-800 mb-4">Why Lab-Grown Diamonds? The Appsilon Advantage</h2>
+                <p class="text-lg text-slate-600 max-w-3xl mx-auto">Discover the extraordinary properties that make our lab-grown diamonds the ideal material for advanced applications.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-slate-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-2">
+                    <div class="text-4xl text-slate-700 mb-4">
+                        <i class="fas fa-temperature-high"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-3">Superior Thermal Management</h3>
+                    <p class="text-slate-600 mb-4">Lab-grown diamond offers unparalleled thermal conductivity (up to 2100 W/mK), for exceptional heat dissipation in electronics.</p>
+                    <div class="bg-slate-200 h-4 rounded-full overflow-hidden">
+                        <div class="bg-slate-700 h-full" style="width: 95%;"></div>
+                    </div>
+                    <div class="flex justify-between text-sm text-slate-500 mt-1">
+                        <span>Diamond (2100 W/mK)</span>
+                        <span>Cu (400)</span>
+                    </div>
+                </div>
+                 <div class="bg-slate-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-2">
+                    <div class="text-4xl text-slate-700 mb-4">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-3">Advanced Materials Research</h3>
+                    <p class="text-slate-600 mb-4">Our research facilities develop lab-grown diamonds with precisely controlled properties for specialized applications.</p>
+                    <ul class="text-slate-600 list-disc pl-5 space-y-1 text-sm">
+                        <li>Controlled doping profiles</li>
+                        <li>Defect engineering</li>
+                        <li>Surface functionalization</li>
+                        <li>Custom crystalline structures</li>
+                    </ul>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-2">
+                    <div class="text-4xl text-slate-700 mb-4">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-3">Precision Diamond Manufacturing</h3>
+                    <p class="text-slate-600 mb-4">Advanced production delivers lab-grown diamonds with exacting specifications and dimensional accuracy.</p>
+                     <ul class="text-slate-600 list-disc pl-5 space-y-1 text-sm">
+                        <li>Tight dimensional tolerances</li>
+                        <li>Advanced surface finishing</li>
+                        <li>Consistent material properties</li>
+                        <li>Complex geometries</li>
+                    </ul>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-2">
+                    <div class="text-4xl text-slate-700 mb-4">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-3">High-Level Customization</h3>
+                    <p class="text-slate-600 mb-4">We collaborate to develop lab-grown diamonds with properties specifically engineered for your unique applications.</p>
+                     <ul class="text-slate-600 list-disc pl-5 space-y-1 text-sm">
+                        <li>Application-specific properties</li>
+                        <li>Collaborative development</li>
+                        <li>Iterative refinement</li>
+                        <li>Specialized testing</li>
+                    </ul>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-2">
+                    <div class="text-4xl text-slate-700 mb-4">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-3">Research-Oriented Development</h3>
+                    <p class="text-slate-600 mb-4">Our development integrates cutting-edge research to continuously improve lab-grown diamond quality and capabilities.</p>
+                     <ul class="text-slate-600 list-disc pl-5 space-y-1 text-sm">
+                        <li>Academic partnerships</li>
+                        <li>Ongoing R&D programs</li>
+                        <li>Peer-reviewed publications</li>
+                        <li>Technology transfer</li>
+                    </ul>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-2">
+                    <div class="text-4xl text-slate-700 mb-4">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-3">Exceptional Electrical Properties</h3>
+                    <p class="text-slate-600 mb-4">Our lab-grown diamonds combine electrical insulation with controllable semiconducting properties for advanced electronics.</p>
+                     <ul class="text-slate-600 list-disc pl-5 space-y-1 text-sm">
+                        <li>High electrical resistivity</li>
+                        <li>Controlled doping</li>
+                        <li>Wide bandgap (5.47 eV)</li>
+                        <li>High breakdown field</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="technology" class="py-16 sm:py-5 bg-slate-50 scroll-mt-18">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-800 mb-4">Our Technology</h2>
+                <p class="text-lg text-slate-600 max-w-3xl mx-auto">Appsilon Enterprise offers comprehensive end-to-end technology capabilities for lab-grown diamond production and processing.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center">
+                <div>
+    <img src="Diamond Growth.jpg" 
+       alt="Equipment for synthetic lab-grown diamond production and analysis" 
+       class="rounded-lg shadow-xl w-full h-auto object-cover" 
+       onerror="this.onerror=null;this.src='https://placehold.co/600x450/CCCCCC/FFFFFF?text=Diamond+Tech+Equipment';">
+</div>
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-slate-800 mb-3">Advanced Reactor Technology (CVD & LPHT)</h3>
+                        <p class="text-slate-600">Our proprietary reactors enable precise control over growth conditions, resulting in lab-grown diamonds with exceptional properties and consistency. We utilize both CVD (Chemical Vapor Deposition) and LPHT (Low Pressure High Temperature) methods.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-slate-800 mb-3">Diamond Seed Production</h3>
+                        <p class="text-slate-600">We develop and produce our own high-quality diamond seeds with carefully controlled properties, ensuring the best foundation for our lab-grown diamonds and enabling precisely oriented crystal growth.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-slate-800 mb-3">Advanced Diamond Characterization</h3>
+                        <p class="text-slate-600">State-of-the-art facilities allow comprehensive analysis of lab-grown diamond properties, ensuring each product meets stringent quality standards via spectroscopic, microscopic, and electrical testing.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-slate-800 mb-3">Precision Laser Processing of Diamonds</h3>
+                        <p class="text-slate-600">Our advanced laser processing enables precise cutting, shaping, and surface modification of lab-grown diamond materials to meet exact dimensional and surface requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 sm:py-5 bg-white scroll-mt-18">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-800 mb-4">Contact Appsilon Enterprise</h2>
+                <p class="text-lg text-slate-600 max-w-3xl mx-auto">Reach out to discuss how our advanced lab-grown diamond materials can support your applications.</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto"> <div class="space-y-8 bg-slate-50 p-6 sm:p-8 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold text-slate-800 mb-6 text-center">Our Offices</h3>
+                    <div class="mb-8">
+                        <h4 class="text-xl font-semibold text-slate-700 mb-3">Headquarters (İstanbul, Türkiye)</h4>
+                        <div class="flex items-start space-x-4 mb-4">
+                            <div class="flex-shrink-0 w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-slate-700 shadow-sm">
+                                <i class="fas fa-map-marker-alt text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-slate-600">TUBITAK Gebze Yerleşkesi<br>B BLOK 1-12<br>41470 Gebze, Kocaeli</p>
+                            </div>
+                        </div>
+                         <div class="flex items-start space-x-4 mb-4">
+                            <div class="flex-shrink-0 w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-slate-700 shadow-sm">
+                                <i class="fas fa-phone text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-slate-600">+90 539 722 18 93</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-slate-700 shadow-sm">
+                                <i class="fas fa-envelope text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-slate-600">info@appsilonenterprise.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-slate-200 pt-8">
+                        <h4 class="text-xl font-semibold text-slate-700 mb-3">Delft Office (Netherlands)</h4>
+                        <div class="flex items-start space-x-4 mb-4">
+                            <div class="flex-shrink-0 w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-slate-700 shadow-sm">
+                                <i class="fas fa-map-marker-alt text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-slate-600">Molengraaffsingel<br>2629 JD Delft, Netherlands</p> </div>
+                        </div>
+                         <div class="flex items-start space-x-4 mb-4">
+                            <div class="flex-shrink-0 w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-slate-700 shadow-sm">
+                                <i class="fas fa-phone text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-slate-600">Contact via general inquiry</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-slate-700 shadow-sm">
+                                <i class="fas fa-envelope text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-slate-600">info@appsilonenterprise.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-slate-200 text-center">
+                        <h4 class="text-lg font-semibold text-slate-800 mb-3">Schedule a Consultation</h4>
+                        <p class="text-slate-600 mb-4">For technical discussions and specialized inquiries about our lab-grown diamonds, our experts are available for in-depth consultations.</p>
+                        <a href="mailto:info@appsilonenterprise.com?subject=Consultation%20Request" class="inline-block bg-slate-700 text-white py-3 px-6 rounded-lg font-semibold hover:bg-slate-600 transition-colors duration-300 shadow-md hover:shadow-lg">Request Consultation via Email</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="careers" class="py-16 sm:py-5 bg-slate-50 scroll-mt-18">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-800 mb-4">Careers at Appsilon Enterprise</h2>
+                <p class="text-lg text-slate-600 max-w-3xl mx-auto">Join our team of innovators and contribute to the future of advanced lab-grown diamond technology.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+                <div class="lg:col-span-2 space-y-6">
+                    <h3 class="text-2xl font-semibold text-slate-800 mb-6">Open Positions in Diamond Technology</h3>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1">
+                        <h4 class="text-xl font-semibold text-slate-800 mb-2">Process Development Engineer for Surface Finishing and Laser Technologies</h4>
+                        <p class="text-slate-500 text-sm mb-3">Full-time | R&D Department</p>
+                        <p class="text-slate-600 mb-4">We are looking for a an ambitious and hands-on Process Development Engineer to take responsibility for investigating Polishing and Laser manufacturing processes and technologies.</p>
+                        <a href="https://www.linkedin.com/jobs/search/?currentJobId=4185969736&f_C=17936818&geoId=92000000&origin=COMPANY_PAGE_JOBS_CLUSTER_EXPANSION&originToLandingJobPostings=4185969736&trk=d_flagship3_company" class="text-slate-700 font-medium hover:text-slate-900 hover:underline transition-colors duration-300">Learn More <i class="fas fa-arrow-right ml-1 text-xs"></i></a>
+                    </div>
+                </div>
+                
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-semibold text-slate-800 mb-6">Why Join Appsilon Enterprise</h3>
+                     <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h4 class="font-semibold text-slate-800 mb-2 flex items-center"><i class="fas fa-flask text-slate-600 mr-3"></i>Cutting-Edge Diamond Research</h4>
+                        <p class="text-slate-600 text-sm">Work at the forefront of materials science with access to state-of-the-art lab-grown diamond facilities.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h4 class="font-semibold text-slate-800 mb-2 flex items-center"><i class="fas fa-users text-slate-600 mr-3"></i>Collaborative Environment</h4>
+                        <p class="text-slate-600 text-sm">Join a team of experts from diverse technical backgrounds working together to solve complex challenges in diamond technology.</p>
+                    </div>
+                     <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h4 class="font-semibold text-slate-800 mb-2 flex items-center"><i class="fas fa-lightbulb text-slate-600 mr-3"></i>Innovation Culture</h4>
+                        <p class="text-slate-600 text-sm">We encourage creative thinking and support the development of revolutionary ideas in the field of lab-grown diamonds.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h4 class="font-semibold text-slate-800 mb-2 flex items-center"><i class="fas fa-chart-line text-slate-600 mr-3"></i>Growth Opportunities</h4>
+                        <p class="text-slate-600 text-sm">Continuous learning and career advancement in the rapidly expanding field of advanced diamond materials.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="https://www.linkedin.com/company/appsilon-advanced-materials/jobs/" class="inline-block bg-slate-700 text-white py-3 px-8 rounded-lg font-semibold hover:bg-slate-600 transition-colors duration-300 shadow-md hover:shadow-lg">View All Opportunities</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-400 pt-16 pb-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h4 class="text-xl font-semibold text-white mb-4">Appsilon Enterprise</h4>
+                    <p class="text-sm mb-6">Leading innovation in lab-grown diamond technology for advanced industrial applications.</p>
+                    <div class="flex space-x-3">
+                        <a href="#" aria-label="LinkedIn Profile" class="w-10 h-10 bg-slate-700 text-white rounded-full flex items-center justify-center hover:bg-slate-600 transition-colors duration-300"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.crunchbase.com/organization/appsilon-diamond-works" 
+   aria-label="Crunchbase Profile"
+   class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:shadow-md transition-shadow duration-300">
+   <img src="Crunchbase.png" alt="Crunchbase" class="w-6 h-6">
+</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Diamond Products</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#products" class="hover:text-white transition-colors duration-300 text-sm">Optical Grade Diamonds</a></li>
+                        <li><a href="#products" class="hover:text-white transition-colors duration-300 text-sm">Quantum Grade Diamonds</a></li>
+                        <li><a href="#products" class="hover:text-white transition-colors duration-300 text-sm">Industrial Diamonds</a></li>
+                        <li><a href="#products" class="hover:text-white transition-colors duration-300 text-sm">Electronic Grade Diamonds</a></li>
+                        <li><a href="#products" class="hover:text-white transition-colors duration-300 text-sm">Diamond Heat Spreaders</a></li>
+                        <li><a href="#products" class="hover:text-white transition-colors duration-300 text-sm">Medical Grade Diamonds</a></li>
+                        <li><a href="#products" class="hover:text-white transition-colors duration-300 text-sm">Tailor-made Diamond Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Diamond Applications</h4>
+                     <ul class="space-y-2">
+                        <li><a href="#industries" class="hover:text-white transition-colors duration-300 text-sm">Electronics & Semiconductors</a></li>
+                        <li><a href="#industries" class="hover:text-white transition-colors duration-300 text-sm">Aerospace & Defense</a></li>
+                        <li><a href="#industries" class="hover:text-white transition-colors duration-300 text-sm">Optics & Photonics</a></li>
+                        <li><a href="#industries" class="hover:text-white transition-colors duration-300 text-sm">Healthcare & Medical</a></li>
+                        <li><a href="#industries" class="hover:text-white transition-colors duration-300 text-sm">Industrial Manufacturing</a></li>
+                        <li><a href="#industries" class="hover:text-white transition-colors duration-300 text-sm">Research & Development</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-white transition-colors duration-300 text-sm">Home</a></li>
+                        <li><a href="#company" class="hover:text-white transition-colors duration-300 text-sm">Company</a></li>
+                        <li><a href="#why-diamonds" class="hover:text-white transition-colors duration-300 text-sm">Why Lab-Grown Diamonds</a></li>
+                        <li><a href="#technology" class="hover:text-white transition-colors duration-300 text-sm">Our Diamond Technology</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors duration-300 text-sm">Contact Us</a></li>
+                        <li><a href="#careers" class="hover:text-white transition-colors duration-300 text-sm">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center pt-8 border-t border-slate-700">
+                <p class="text-sm">&copy; 2025 Appsilon Enterprise. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hero section background image loading
+            const heroSection = document.getElementById('home');
+            if (heroSection && heroSection.dataset.actualBg) {
+                const img = new Image();
+                img.src = heroSection.dataset.actualBg;
+                img.onload = () => {
+                    heroSection.style.backgroundImage = `url(${heroSection.dataset.actualBg})`;
+                };
+            }
+
+            // Tab functionality
+            const tabs = document.querySelectorAll('.tab');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            if (tabs.length > 0 && tabContents.length > 0) { // Ensure tabs and content exist
+                // Set the first tab as active by default
+                tabs[0].classList.add('bg-slate-700', 'text-white');
+                tabs[0].classList.remove('hover:border-slate-700', 'hover:text-slate-800');
+                
+                // Hide all tab contents except the first one
+                tabContents.forEach((content, index) => {
+                    if (index === 0) {
+                        content.classList.remove('hidden');
+                        content.classList.add('active');
+                    } else {
+                        content.classList.add('hidden');
+                        content.classList.remove('active');
+                    }
+                });
+            }
+
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(t => {
+                        t.classList.remove('bg-slate-700', 'text-white');
+                        t.classList.add('hover:border-slate-700', 'hover:text-slate-800');
+                    });
+                    tab.classList.add('bg-slate-700', 'text-white');
+                    tab.classList.remove('hover:border-slate-700', 'hover:text-slate-800'); 
+                    
+                    tabContents.forEach(content => {
+                        content.classList.add('hidden');
+                        content.classList.remove('active');
+                    });
+                    
+                    const tabId = tab.getAttribute('data-tab');
+                    const activeContent = document.getElementById(tabId);
+                    if (activeContent) {
+                        activeContent.classList.remove('hidden');
+                        activeContent.classList.add('active');
+                    }
+                });
+            });
+            
+            // Smooth scrolling for anchor links
+            const header = document.querySelector('header');
+            let headerHeight = 72; // Default header height (h-18 = 4.5rem = 72px)
+            if (header) {
+                headerHeight = header.offsetHeight;
+            }
+            
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href.length > 1 && href.startsWith('#')) { 
+                        const targetId = href.substring(1);
+                        const targetElement = document.getElementById(targetId);
+                        
+                        if (targetElement) {
+                            e.preventDefault();
+                            if (header) headerHeight = header.offsetHeight; // Recalculate in case it changes
+                            const elementPosition = targetElement.getBoundingClientRect().top;
+                            const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+                            
+                            window.scrollTo({
+                                top: offsetPosition,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobileMenuButton');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileNavLinks = mobileMenu.querySelectorAll('a');
+
+            mobileMenuButton.addEventListener('click', (event) => {
+                event.stopPropagation(); 
+                mobileMenu.classList.toggle('hidden');
+                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true' || false;
+                mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+                mobileMenu.setAttribute('aria-hidden', isExpanded);
+            });
+
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', 'false');
+                    mobileMenu.setAttribute('aria-hidden', 'true');
+                });
+            });
+
+            document.addEventListener('click', (event) => {
+                const isClickInsideMenu = mobileMenu.contains(event.target);
+                const isClickOnButton = mobileMenuButton.contains(event.target);
+
+                if (!isClickInsideMenu && !isClickOnButton && !mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', 'false');
+                    mobileMenu.setAttribute('aria-hidden', 'true');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
